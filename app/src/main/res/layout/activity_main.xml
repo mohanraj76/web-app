@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/input_fields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/roundedcorner"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/link_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_share_24" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_toStartOf="@+id/cancel_icon"
+            android:layout_toEndOf="@+id/link_icon"
+            android:background="@null"
+            android:hint="Search or Type URL"
+            android:textColor="@color/black"
+            android:inputType="textUri"
+            android:id="@+id/url_input"
+            android:textSize="18sp"
+            android:imeOptions="actionGo"
+            android:singleLine="true"/>
+
+        <ImageView
+            android:id="@+id/cancel_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_cancel_24" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_dynamic_neutral70"
+        android:layout_below="@+id/input_fields"
+        android:id="@+id/divider_1"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_below="@id/input_fields"
+        android:visibility="invisible"/>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divider_1"
+        android:layout_above="@id/divider_2"
+        android:id="@+id/web_view"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_dynamic_neutral70"
+        android:id="@+id/divider_2"
+        android:layout_above="@id/bottom_layout"/>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/progress_bar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_above="@id/bottom_layout"      
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_layout"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/web_back"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_arrow_forward_ios_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/web_forward"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_refresh_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/web_refresh"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_share_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/web_share"/>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
